@@ -49,7 +49,14 @@ class ViewController: UIViewController {
         print("I2:", input2)
         print(String(calculation.addition(input1: input1, input2: input2)))
         displayLabel.text = String(calculation.addition(input1: input1, input2: input2))
+        calculation.prn()
     }
     
+}
+
+extension Calculation {
+    func prn () {
+        print("Coming From extention")
+    }
 }
 
