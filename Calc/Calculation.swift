@@ -8,12 +8,25 @@
 
 import Foundation
 
-class Calculation {
+protocol consolPrinter {
+    func cp()
+    var toPrint: String {get}
+}
+
+class Calculation: consolPrinter {
+    
+    func cp() {
+        print("result = \(toPrint) calculated.")
+    }
+    
+    var toPrint: String = ""
+    
     
     var result: Int = 0
     
     func addition(input1: Int, input2: Int) -> Int {
         result = input1 + input2
+        toPrint = String(result)
         return result
     }
     

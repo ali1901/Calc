@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         print(String(calculation.addition(input1: input1, input2: input2)))
         displayLabel.text = String(calculation.addition(input1: input1, input2: input2))
         calculation.prn()
+        calculation.cp()
     }
     
 }
